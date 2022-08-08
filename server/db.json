@@ -1,0 +1,66 @@
+{
+  "post": [
+    {
+      "postId": 0,
+      "username": "이름1",
+      "createdAt": "2022-01-01",
+      "title": "TIL제목1",
+      "done": 0,
+      "check": [
+        {
+            "text": "할 일1",
+            "checked": 0
+        },
+        {
+            "text": "할 일2",
+            "checked": 1
+        },
+        {
+            "text": "할 일3",
+            "checked": 2
+        }
+      ]
+    },
+    {
+      "postId": 1,
+      "username": "이름2",
+      "createdAt": "2022-02-02",
+      "title": "TIL제목2",
+      "done": 0,
+      "check": [
+        {
+            "text": "할 일1",
+            "checked": 0
+        },
+        {
+            "text": "할 일2",
+            "checked": 1
+        },
+        {
+            "text": "할 일3",
+            "checked": 2
+        }
+      ]
+    }
+  ],
+  "comment": [
+    {
+      "postId": 0,
+      "comments": [
+          {
+              "commentId": 0,
+              "commentUsername": "김영희",
+              "commentText": "화이팅하세요!",
+              "commentCreatedAt": "0000-00-00"
+          },
+          {
+              "commentId": 1,
+              "commentUsername": "유재석",
+              "commentText": "반갑습니다.",
+              "commentCreatedAt": "0000-00-00"
+          }
+      ]
+    }
+
+  ]
+}
