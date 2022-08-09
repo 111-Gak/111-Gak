@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <MyHeader>
             <div className="contents-area">
-                <span>
+                <span onClick={()=> navigate('/')}>
                     제목
                 </span>
                 <ul className="menu-ul">
@@ -52,6 +52,7 @@ ul, li {
 
 .menu-li {
     padding: 0 10px;
+    cursor: pointer;
 }
 
 `

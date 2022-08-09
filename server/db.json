@@ -1,66 +1,80 @@
 {
   "posts": [
     {
-      "postId": 0,
+      "id": 0,
+      "postId": "oe05j32-3m",
       "username": "이름1",
       "createdAt": "2022-01-01",
-      "title": "TIL제목1",
-      "done": 0,
-      "check": [
+      "title": "TIL제목1 json",
+      "done": 1
+    },
+    {
+      "id": 1,
+      "postId": "6f-s9ewv0n",
+      "username": "이름2",
+      "createdAt": "2022-02-02",
+      "title": "TIL제목2",
+      "done": 0
+    }
+  ],
+  "checkList": [
+    {
+      "id": 0,
+      "postId": "6f-s9ewv0n",
+      "chk1": 1,
+      "chk1Text": "할 일1",
+      "chk2": 1,
+      "chk2Text": "할 일2",
+      "chk3": 1,
+      "chk3Text": "할 일3"
+    },
+    {
+      "id": 1,
+      "postId": "93fmelspc2",
+      "chk1": 1,
+      "chk1Text": "할 일1",
+      "chk2": 0,
+      "chk2Text": "할 일2"
+    },
+    {
+      "id": 2,
+      "postId": "oe05j32-3m",
+      "chk1": 1,
+      "chk1Text": "할 일1",
+      "chk2": 1,
+      "chk2Text": "할 일2"
+    }
+  ],
+  "comments": [
+    {
+      "id": 0,
+      "postId": "oe05j32-3m",
+      "list": [
         {
-            "text": "할 일1",
-            "checked": 0
-        },
-        {
-            "text": "할 일2",
-            "checked": 1
-        },
-        {
-            "text": "할 일3",
-            "checked": 2
+          "commentId": "0neopw32k8",
+          "commentUsername": "박명수",
+          "commentText": "2번째 글의 댓글",
+          "commentCreatedAt": "0000-00-00"
         }
       ]
     },
     {
-      "postId": 1,
-      "username": "이름2",
-      "createdAt": "2022-02-02",
-      "title": "TIL제목2",
-      "done": 0,
-      "check": [
+      "id": 1,
+      "postId": "6f-s9ewv0n",
+      "list": [
         {
-            "text": "할 일1",
-            "checked": 0
+          "commentId": "0neopw32k8",
+          "commentUsername": "김영희",
+          "commentText": "화이팅하세요!",
+          "commentCreatedAt": "0000-00-00"
         },
         {
-            "text": "할 일2",
-            "checked": 1
-        },
-        {
-            "text": "할 일3",
-            "checked": 2
+          "commentId": "siebva2lmf",
+          "commentUsername": "유재석",
+          "commentText": "반갑습니다.",
+          "commentCreatedAt": "0000-00-00"
         }
       ]
     }
-  ],
-  "comment": [
-    {
-      "postId": 0,
-      "comments": [
-          {
-              "commentId": 0,
-              "commentUsername": "김영희",
-              "commentText": "화이팅하세요!",
-              "commentCreatedAt": "0000-00-00"
-          },
-          {
-              "commentId": 1,
-              "commentUsername": "유재석",
-              "commentText": "반갑습니다.",
-              "commentCreatedAt": "0000-00-00"
-          }
-      ]
-    }
-
   ]
 }

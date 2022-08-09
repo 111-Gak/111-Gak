@@ -28,6 +28,7 @@ const Contents = styled.div`
     
 width: 100%;
 max-width: 1000px;
+min-height: calc(100vh - 60px - 60px);
 
 margin: 0 auto;
 padding: 30px 10px 0;
