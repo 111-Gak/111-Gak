@@ -10,7 +10,7 @@ export default function CheckBox(props){
         const newValue = {[ev.target.name]: toggleDone} 
         const patchValue = {...chks, ...newValue}
 
-        await axios.patch(`http://localhost:3001/checklist/${id}`, patchValue, {
+        await axios.patch(`https://sheltered-ocean-99610.herokuapp.com/checklist/${id}`, patchValue, {
             headers: { 
                 'Content-Type': 'application/json' 
             }

@@ -20,7 +20,7 @@ export default function WritePage() {
         const newPostId = nanoid(10);
 
         const newPost = {...post, postId: newPostId};
-        await Axios.post("http://localhost:3001/posts/", newPost)
+        await Axios.post("https://sheltered-ocean-99610.herokuapp.com/posts/", newPost)
         .then(res => console.log(res))
         .catch(err => console.log(err));
 
@@ -31,7 +31,7 @@ export default function WritePage() {
 
         const newChecklist = {...checklist, ...initCheck, postId: newPostId};
 
-        await Axios.post("http://localhost:3001/checklist/", newChecklist)
+        await Axios.post("https://sheltered-ocean-99610.herokuapp.com/checklist/", newChecklist)
         .then(res => console.log(res))
         .catch(err => console.log(err));
 

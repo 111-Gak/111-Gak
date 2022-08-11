@@ -15,7 +15,7 @@ export default function DetailPage (){
 
     const [post, setPost] = useState([]);
     const fetchPost = async () => {
-        const { data } = await axios.get("http://localhost:3001/posts?postId="+postId)  
+        const { data } = await axios.get("https://sheltered-ocean-99610.herokuapp.com/posts?postId="+postId)  
 
         setPost(...data);
         setLoaded(true)

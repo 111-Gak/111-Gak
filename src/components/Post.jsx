@@ -21,7 +21,7 @@ export default function Post(props) {
     const fetchChks = async () => {
         let data;
         try {
-            data = await axios.get(`http://localhost:3001/checklist/${id}`)
+            data = await axios.get(`https://sheltered-ocean-99610.herokuapp.com/checklist/${id}`)
         } catch (err) {
             console.log(err)
         } finally {
@@ -45,7 +45,7 @@ export default function Post(props) {
     const updatePostDone = async (doneId, newDone) => {
         let data;
         try {
-            data = await axios.patch(`http://localhost:3001/posts/${doneId}`, {id: doneId, done: newDone})
+            data = await axios.patch(`https://sheltered-ocean-99610.herokuapp.com/posts/${doneId}`, {id: doneId, done: newDone})
         } catch (err) {
             console.log(err)
         } finally {

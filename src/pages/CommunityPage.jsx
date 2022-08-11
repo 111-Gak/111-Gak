@@ -14,7 +14,7 @@ export default function CommunityPage() {
     const fetchPosts = async () => {
         let data;
         try {
-            data = await axios.get("http://localhost:3001/posts")
+            data = await axios.get("https://sheltered-ocean-99610.herokuapp.com/posts")
         } catch (err) {
             console.log(err)
         } finally {

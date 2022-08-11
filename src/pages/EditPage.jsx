@@ -17,14 +17,14 @@ export default function EditPage () {
     const [ loaded, setLoaded ] = useState(false);
     const inputValue = useSelector(state => state.posts.post);
     const postId = useParams('postId').postId;
-    // console.log(postId);
+
     const navigate = useNavigate();
 
 
     const onSubmitHandler = (e) => {
         e.preventDefault(); //onSubmitHandler가 실행될 때 새로고침방지
         const newEditValue = {...editValue, ...inputValue, postId: postId}; //editValue:불러온, 이미 입력되었던,수정해야할 값
-        axios.patch(`http://localhost:3001/posts/${editValue.id}`, newEditValue);
+        axios.patch(`https://sheltered-ocean-99610.herokuapp.com/posts/${editValue.id}`, newEditValue);
         // console.log({...editValue, ...inputValue, postId: postId})
         navigate(`/post/${postId}`);
     };
@@ -34,7 +34,7 @@ export default function EditPage () {
 
 
     const getPost = async() => {
-        await axios.get("http://localhost:3001/posts?postId="+postId)
+        await axios.get("https://sheltered-ocean-99610.herokuapp.com/posts?postId="+postId)
         .then(res => {
             setEditValue(...res.data) //data.data처럼 결과값 안에 data를 봐야합니다
             // console.log(...res.data)
