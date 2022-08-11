@@ -38,7 +38,8 @@ export default function DetailPage (){
     };
 
     return (
-        <Detail>
+        <>
+        {loaded && <Detail>
             <Post list={{...post}} key={post.postId} />
             <Button 
                 buttonText={'수정하기'} 
@@ -49,6 +50,8 @@ export default function DetailPage (){
                 action={onClickDeleteButton}
             />
         </Detail>
+        }
+        </>
 
     );
 };

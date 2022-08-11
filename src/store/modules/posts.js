@@ -24,7 +24,6 @@ const postsSlice = createSlice({
         editPost: (state, action) => {
             const {name:keyword, currentValue} = action.payload;
             const newState={...state.post, [keyword]: currentValue};
-            console.log(newState);
 
             state.post = newState;
         }

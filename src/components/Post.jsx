@@ -11,6 +11,7 @@ export default function Post(props) {
     const {id, postId, username, createdAt, title, done} = props.list;
     
     const [chks, setChks] = useState();
+    const [doneResult, setDoneResult] = useState(done);
     const [loaded, setLoaded] = useState(false);
     
     useEffect(()=>{
@@ -25,7 +26,30 @@ export default function Post(props) {
             console.log(err)
         } finally {
             setChks(data.data)
+            chkDone(data.data)
             setLoaded(true)
+        }
+    }
+    const chkDone = (list) => {
+        let count = 0;
+        for (const x in list){
+            if(list[x] === 1 && x !== "id") count++;
+        }
+        if( count === 3 ){
+            updatePostDone(id, 1)
+        } else if( count < 3 && done === 1 ){
+            updatePostDone(id, 0)
+        }
+    }
+
+    const updatePostDone = async (doneId, newDone) => {
+        let data;
+        try {
+            data = await axios.patch(`http://localhost:3001/posts/${doneId}`, {id: doneId, done: newDone})
+        } catch (err) {
+            console.log(err)
+        } finally {
+            setDoneResult(newDone);
         }
     }
 
@@ -38,7 +62,7 @@ export default function Post(props) {
             }>
                 <div>
                     <span className="post-name">
-                        {done? "💚":"🖤"}
+                        {doneResult? "💚":"🖤"}
                         {username}
                     </span>
                     <span className="post-title">

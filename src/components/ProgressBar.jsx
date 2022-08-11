@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 export default function ProgressBar(props){
-    const {postId, chks} = props
+    const {chks} = props
     const [counts, setCounts] = useState(0);
     
     useEffect(()=>{
