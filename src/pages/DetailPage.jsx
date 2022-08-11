@@ -20,10 +20,10 @@ export default function DetailPage (){
         setPost(...data);
         setLoaded(true)
     };
-    const deletePost = async () => {
-        await axios.delete("http://localhost:3001/posts?postId")
-    };
 
+    const deletePost = async () => {
+        // await axios.delete("http://localhost:3001/posts/0", {})
+    };
     
     useEffect(()=>{
         fetchPost()
@@ -33,7 +33,8 @@ export default function DetailPage (){
         navigate(`/post/${postId}/edit`);
     };
 
-    const onClickDeleteButton = () => {
+    const onClickDeleteButton = async () => {
+        await deletePost()
         navigate(`/posts`);
     };
 

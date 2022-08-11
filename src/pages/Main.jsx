@@ -11,13 +11,13 @@ const Main = () => {
             <ButtonStyle onClick={() => {
                 nagivate("/write")
             }}>
-                TIL
+                🖤새 TIL 작성하기
             </ButtonStyle>
             <ButtonStyle onClick={() => {
                 nagivate("/posts")
             }}>
                 
-                커뮤니티
+                보러가기💚
             </ButtonStyle>
             </ButtonGroup>
         </div>
@@ -32,28 +32,31 @@ const ButtonGroup = styled.div`
     margin-top: 170px;
 `
 
-
 const ButtonStyle = styled.button`
+    font-family: 'LeeSeoyun';
+    
     width: 700px;
-    height: 150px;
+    height: 120px;
     margin: 20px auto;
-    background: orange;
+    background: #777777;
     color: #ffffff;
-    font-size: 30px;
-    line-height: 42px;
-    border-radius: 20px;
+    font-size: 2em;
+    line-height: 36px;
+    border-radius: 100px;
     padding: 0;
     border: none;
     position: relative; //수정 기준점, 
+    transition: all 0.2s;
 
     &:hover {
     background: transparent;
-    color: #816f6f;
+    color: #777777;
     box-shadow:
     -7px -7px 20px 0px #fff9,
     -4px -4px 5px 0px #fff9,
     7px 7px 20px 0px #eee3e320,
     4px 4px 5px 0px #bbb5b511;
+    font-weight: 700;
     }
     &:before,
     &:after{
@@ -61,10 +64,10 @@ const ButtonStyle = styled.button`
     position:absolute;
     top:0;
     right:0;
-    height:2px;
+    height:5px;
     width:0;
-    background: orange;
-    transition:400ms ease all;
+    background-image: linear-gradient(to left, transparent 40%, #555, transparent 60%);
+    transition: .2s ease all;
     }
     &:after{
     right:inherit;

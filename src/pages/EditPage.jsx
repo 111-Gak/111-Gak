@@ -60,7 +60,6 @@ export default function EditPage () {
             name={'username'} 
             placeholder={'작성자'}
             max={20}
-            required
             />
 
             <TextInputBox 
@@ -68,14 +67,12 @@ export default function EditPage () {
             name={'title'} 
             placeholder={'제목'}
             max={50}
-            required
             />
 
             <TextInputBox 
             name={'chk'} 
             placeholder={'첫 번째 체크 박스'}
             max={100}
-            required
             />
 
             <TextInputBox 
