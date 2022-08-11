@@ -33,6 +33,7 @@ export default function TextInputBox(props){
                 } else {
                     dispatch(editPost({name, currentValue}))
                 }
+                
             }}
             />
         </InputBox>

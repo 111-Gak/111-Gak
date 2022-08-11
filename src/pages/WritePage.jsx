@@ -33,7 +33,7 @@ export default function WritePage() {
         .then(res => console.log(res))
         .catch(err => console.log(err));
 
-        navigate('/community')
+        navigate('/posts')
     };
 
     return (
@@ -55,20 +55,20 @@ export default function WritePage() {
             />
 
             <TextInputBox 
-            name={'chk1'} 
+            name={'chk'} 
             placeholder={'첫 번째 체크 박스'}
             max={100}
             required
             />
 
             <TextInputBox 
-            name={'chk2'} 
+            name={'chk'} 
             placeholder={'두 번째 체크 박스'}
             max={100}
             />
 
             <TextInputBox 
-            name={'chk3'} 
+            name={'chk'} 
             placeholder={'세 번째 체크 박스'}
             max={100}
             />

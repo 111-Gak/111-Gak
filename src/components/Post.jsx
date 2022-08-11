@@ -1,12 +1,41 @@
+import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom'
+import axios from "axios";
+
 import styled from "styled-components";
 import ProgressBar from "./ProgressBar";
+import CheckBox from "./CheckBox";
 
 export default function Post(props) {
-    const {postId, username, createdAt, title, done, check}=props.list;
+    const navigate = useNavigate();
+    const {id, postId, username, createdAt, title, done} = props.list;
+    
+    const [chks, setChks] = useState();
+    const [loaded, setLoaded] = useState(false);
+    
+    useEffect(()=>{
+        fetchChks()
+    }, [loaded])
 
-    return(
-        <MyPost>
-            <div className="post-header">
+    const fetchChks = async () => {
+        let data;
+        try {
+            data = await axios.get(`http://localhost:3001/checklist/${id}`)
+        } catch (err) {
+            console.log(err)
+        } finally {
+            setChks(data.data)
+            setLoaded(true)
+        }
+    }
+
+    return (
+    <>
+        {loaded && <MyPost>
+            <div className="post-header"  
+            onClick = {()=> {
+                navigate('/post/'+postId)}
+            }>
                 <div>
                     <span className="post-name">
                         {done? "💚":"🖤"}
@@ -21,30 +50,16 @@ export default function Post(props) {
                 </span>
             </div>
             <div className="post-body">
-                <ProgressBar checkList={check} />
+                <ProgressBar chks={chks} postId={postId} />
 
                 <div>
-                    {check.map((chk, i) => {
-                        return (
-                            <div key={chk.text}>
-                                <input 
-                                type="checkbox" 
-                                name={'chk'+i} 
-                                id={'chk'+i}
-                                checked={chk.checked ? 'checked' : null}
-                                onClick={()=>alert(postId, chk.i)}
-                                onChange={()=>null}
-                                />
-                                <label htmlFor={'chk'+i} >
-                                    {chk.text}
-                                </label>
-                            </div>
-                        )
-                    })}
+                    <CheckBox chks={chks} postId={postId} id={id} setLoaded={setLoaded}/>
                 </div>
 
             </div>
         </MyPost>
+        }
+    </>
     )
 }
 

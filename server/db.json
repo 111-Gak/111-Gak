@@ -2,7 +2,7 @@
   "posts": [
     {
       "id": 0,
-      "postId": "oe05j32-3m",
+      "postId": "6f-s9ewv0n",
       "username": "이름1",
       "createdAt": "2022-01-01",
       "title": "TIL제목1 json",
@@ -10,7 +10,15 @@
     },
     {
       "id": 1,
-      "postId": "6f-s9ewv0n",
+      "postId": "93fmelspc2",
+      "username": "이름2",
+      "createdAt": "2022-02-02",
+      "title": "TIL제목2",
+      "done": 0
+    },
+    {
+      "id": 2,
+      "postId": "oe05j32-3m",
       "username": "이름2",
       "createdAt": "2022-02-02",
       "title": "TIL제목2",

@@ -10,7 +10,7 @@ export default function Header() {
                     제목
                 </span>
                 <ul className="menu-ul">
-                    <li className="menu-li" onClick={()=> navigate('/community')}>
+                    <li className="menu-li" onClick={()=> navigate("/posts")}>
                         목록
                     </li>
                     <li className="menu-li" onClick={()=> navigate('/write')}>
