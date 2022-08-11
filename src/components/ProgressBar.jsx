@@ -24,7 +24,7 @@ export default function ProgressBar(props){
         <>
             <MyProgressBar counts={counts}>
                 <div className="percent">
-                    {counts * 33}%
+                    {Math.round((counts * 33.3 ) - 0.2)}%
                 </div>    
             </MyProgressBar>
         </>
